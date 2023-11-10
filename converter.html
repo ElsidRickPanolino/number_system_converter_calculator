@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = "header">
+        <p class = "title">NUMBER SYSTEM CONVERTER<p>
+    </div>
+    <div class="content">
+        <div class = "menu" id = "mainConverter">
+            <p class = "menu_text" style = "color: #FFFFFF">CONVERTER</p>
+            <hr><br>
+                <div class="input_text_vertical">
+                    <p class = "menu_text" style = "color: #FFFFFF; font-size: 1.2rem;">BINARY</p>
+                    <input type="text" class = "text_input text_input_converter" id = "input_binary" placeholder="01" oninput="validate('01', 'input_binary',0)"><br>
+                    <p class = "menu_text" style = "color: #FFFFFF; font-size: 1.2rem;">OCTAL</p>
+                    <input type="text" class = "text_input text_input_converter" id = "input_octal" placeholder="01234567" oninput="validate('01234567', 'input_octal', 1)"><br>
+                    <p class = "menu_text" style = "color: #FFFFFF; font-size: 1.2rem;">DECIMAL</p>
+                    <input type="text" class = "text_input text_input_converter" id = "input_decimal" placeholder="0123456789" oninput="validate('0123456789-', 'input_decimal', 2)"><br>
+                    <p class = "menu_text" style = "color: #FFFFFF; font-size: 1.2rem;">HEX</p>
+                    <input type="text" class = "text_input text_input_converter" id = "input_hex" placeholder="0123456789ABCDEF" oninput="validate('0123456789ABCDEFabcdef', 'input_hex', 3)"><br>
+
+                </div>
+               <!-- <button type="submit" class = "menu_button" onclick="convertButton()">CONVERT</button> -->
+                <a href="index.html"><button class = "menu_button" >EXIT</button></a>
+            </div>
+        </div>
+    <div class = "footer">
+        <p class = "footer_text">Elsid Rick Panolino<p>
+    </div>
+
+</body>

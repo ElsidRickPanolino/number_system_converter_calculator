@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = "header">
+        <p class = "title">BINARY CALCULATOR<p>
+    </div>
+    <div class="content">
+        <div class = "menu">
+            <p class = "menu_text">SELECT OPERATION<p>
+                <div id = "operations">
+                    <button class = "operation_button" onclick="selectOperation(0)">+</button>
+                    <button class = "operation_button" onclick="selectOperation(1)">-</button>
+                    <button class = "operation_button" onclick="selectOperation(2)">×</button>
+                    <button class = "operation_button" onclick="selectOperation(3)">÷</button>
+                    <button class = "operation_button" onclick="selectOperation(4)">2's</button>
+                </div>
+                <a href = "index.html"><button class = "menu_button" style="width: 50%; margin-left: 25%;">EXIT</button></a>
+        </div>
+        <div class = "menu" id = "mainCalculator" style = "display: none">
+            <hr>
+            <p class = "menu_text" style = "color: #FFFFFF">CALCULATOR<p>
+
+                <div class="input_text">
+                    <div class="input_cbxTxt" id="cbxTxt1">
+                        <input type="text" class = "text_input" id = "input1" oninput="validate('01', 'input1')" style="margin: 0;">
+                        <div class = "cbx_signed">
+                            <input type="checkbox" class="cbx_input" id="cbxinput1">
+                            <p class = "menu_text" style="font-size: 15pt; color: #FFFFFF; text-align: left; margin-left: 5pt;">SIGNED</p>
+                        </div>    
+                    </div>
+                    <p id = "operation_symbol" class = "menu_text" style="font-size: 1.3rem; color: #FFFFFF;">+</p>
+                    <div class="input_cbxTxt" id="cbxTxt2">
+                        <input type="text" class = "text_input" id = "input2" oninput="validate('01', 'input2')" style="margin: 0;">
+                        <div class = "cbx_signed">
+                            <input type="checkbox" class="cbx_input" id="cbxinput2">
+                            <p class = "menu_text" style="font-size: 15pt; color: #FFFFFF; text-align: left; margin-left: 5pt;">SIGNED</p>
+                        </div>    
+                    </div>
+                </div>
+            <p class = "menu_text" style="font-size: 1.2rem; color: #FFFFFF">RESULT<p></p>
+            <div class="input_cbxTxt" id="cbxOutput" style="width: 90%; align-self: center; margin: 5%">
+                <input class = "output" id = "output" oninput="validate('','output')" style="margin: 0;">    
+                <div class = "cbx_signed">
+                    <input type="checkbox" class="cbx_input" id="cbx_output" onclick="ouputCbxController()">
+                    <p class = "menu_text" style="font-size: 15pt; color: #FFFFFF; text-align: left; margin-left: 5pt;">SIGNED</p>
+                </div>  
+            </div>
+
+
+            <button type="submit" class = "menu_button" onclick="calculate()">CALCULATE</button>
+        </div>
+    </div>
+    <div class = "footer">
+        <p class = "footer_text">Elsid Rick Panolino<p>
+    </div>
+
+</body>
